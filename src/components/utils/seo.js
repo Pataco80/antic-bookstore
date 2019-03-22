@@ -51,6 +51,7 @@ function SEO({ description, lang, meta, keywords, title }) {
           property: `og:type`,
           content: `website`,
         },
+        // Twitter
         {
           name: `twitter:card`,
           content: `summary`,
@@ -67,13 +68,30 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        // Facebook
+        {
+          name: `facebook:card`,
+          content: `summary`,
+        },
+        {
+          name: `facebook:creator`,
+          content: site.siteMetadata.author,
+        },
+        {
+          name: `facebook:title`,
+          content: title,
+        },
+        {
+          name: `facebook:description`,
+          content: metaDescription,
+        }
       ]
         .concat(
           keywords.length > 0
             ? {
-                name: `keywords`,
-                content: keywords.join(`, `),
-              }
+              name: `keywords`,
+              content: keywords.join(`, `),
+            }
             : []
         )
         .concat(meta)}
