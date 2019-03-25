@@ -1,5 +1,5 @@
 import React from 'react'
-import BcgImg from 'gatsby-image'
+import BcgImg from 'gatsby-background-image'
 import { Container, Navbar, Nav } from 'react-bootstrap'
 
 
