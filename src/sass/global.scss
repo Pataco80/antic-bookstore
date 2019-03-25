@@ -1,0 +1,37 @@
+// Variables
+$primary-color: #5e2919;
+$secondary-color: #e0d0c0;
+//header navigation
+.navbar.navbar-light {
+ background-color: $secondary-color;
+ img {
+  height: 50px;
+  margin-right: 1rem;
+ }
+ button {
+  color: $primary-color;
+  border: 2px solid $primary-color;
+ }
+ .navbar-brand {
+  color: $primary-color;
+ }
+ .navbar-collapse {
+  justify-content: center;
+  a {
+   color: $primary-color;
+   &:hover {
+    border-bottom: 1px solid $primary-color;
+   }
+   &.active {
+    color: $primary-color;
+    font-weight: bold;
+   }
+  }
+  @media (min-width: 576px) {
+   justify-content: flex-end;
+  }
+  .navbar-nav {
+   align-items: center;
+  }
+ }
+}
