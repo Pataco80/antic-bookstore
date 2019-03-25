@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "../global/header"
-import Navigation from '../global/navigation'
 import Footer from '../global/footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../../sass/global.scss'
@@ -31,7 +30,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <section
           style={{
-            paddingTop: `3rem`,
+            paddingTop: `66px`,
           }}
         >
           <main>{children}</main>

@@ -8,7 +8,7 @@ const ProductsPage = ({ data }) => {
   return (
     <Layout>
 
-      <h1>Nos Produits</h1>products
+      <h1>Nos Produits</h1>
       <Link to='/'>Home</Link>
       <div>
         {data.products.edges.map(({ node: product }) => {
