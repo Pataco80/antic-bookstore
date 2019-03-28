@@ -2,79 +2,41 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout/layout"
-import { Row, Col } from 'react-bootstrap'
-
-import BackgroundImage from '../components/background-image'
-import Image from "gatsby-image"
+//import Image from "gatsby-image"
 import SEO from "../components/utils/seo"
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <BackgroundImage img={data.bcgImg.childImageSharp.fluid} title="Bienvenue sur Antic Book Store" styles="bcg-img-section" />
-    <section className="container last-products">
+    <h1>Hi people</h1>
 
-      <h2 className="text-center">Nos derniers produits</h2>
-      <Row className="justify-content-sm-center">
-        {data.produits.edges.map(({ node: produits }) => {
-          return (
-            <article className="col-sm-6 col-md-4" key={produits.id}>
-              <Row className="img-product justify-content-center">
-                <Image className="col-xs-12" fixed={produits.featureImage.fixed} />
-              </Row>
 
-              <Row className="content-product">
-                <Col className="info">
-                  <h3>{produits.productName}</h3>
-                  <p>{`CHF ${produits.price}`}</p>
-                  <p>{produits.author}</p>
-                  <p>{produits.publicationDate}</p>
-                  <p>{`Publié le ${produits.createdAt}`}</p>
-                  <Link className="btn btn-primary" to={`/products/${produits.productName}`}>Details</Link>
-                </Col>
-              </Row>
-            </article>
+    <Link to="/about/">A Propos</Link>
+    <Link to="/products/">Nos Produits</Link>
 
-          )
-        })}
-      </Row>
-    </section>
+    <h3>Nos derniers produits</h3>
+    <div>
+      {/*data.produits.edges.map(({ node: produits }) => {
+        return (
+          <div key={produits.id} style={{ margin: '1rem 0', padding: '1rem' }}>
+            <Image fixed={produits.FeaturedImage.fixed} alt="image-produit" />
+            <h1>{produits.titreDuLivre}</h1>
+            <p>{`CHF ${produits.price}`}</p>
+            <p>{produits.auteur}</p>
+            <p>{produits.publicationDate}</p>
+            <p>{produits.description.description}</p>
+            <p>{`Publié le ${produits.createdAt}`}</p>
+          </div>
+        )
+      })*/}
+    </div>
   </Layout>
 )
 
 export default IndexPage
 
-export const pageQuery = graphql`
-{
-  bcgImg: file(relativePath: {eq: "bcg-img-index.jpg"}) {
-    childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-  },
-  produits:allContentfulProductsCatalogue(sort:{fields:updatedAt,order:DESC},limit:3){
-    edges{
-      node{
-        id
-        productName
-        author
-        price
-        publicationDate(formatString:"DD MMMM YYYY")
-        featureImage{
-          fixed(width:200){
-            ...GatsbyContentfulFixed_tracedSVG
-          }
-        }
-        createdAt(formatString:"DD MMMM YYYY")
-      }
-    }
-  }
-}
-`
-
-
 /*
+export const pageQuery = graphql`
 {
   produits:allContentfulProduits(sort:{fields:updatedAt,order:DESC},limit:3){
     edges{
@@ -96,4 +58,5 @@ export const pageQuery = graphql`
     }
   }
 }
+`
 */

@@ -1,40 +1,6 @@
 // Variables
 $primary-color: #5e2919;
 $secondary-color: #e0d0c0;
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
- color: $primary-color;
- text-decoration: underline;
-}
-
-h2 {
- font-size: 3rem;
- margin-bottom: 1.5rem;
-}
-
-a {
- color: $primary-color;
- text-decoration: underline;
-}
-
-.btn-primary {
- background-color: $primary-color;
- border-color: $primary-color;
- &:focus,
- &:active,
- &:hover,
- &:not(:disabled):not(.disabled):active {
-  background-color: $secondary-color;
-  border-color: $primary-color;
-  color: $primary-color;
-  box-shadow: none;
- }
-}
-
 //header navigation
 .navbar.navbar-light {
  background-color: $secondary-color;
@@ -53,7 +19,6 @@ a {
   justify-content: center;
   a {
    color: $primary-color;
-   text-decoration: none;
    &:hover {
     border-bottom: 1px solid $primary-color;
    }
@@ -69,72 +34,4 @@ a {
    align-items: center;
   }
  }
-}
-
-// bcg-image-section
-.bcg-img-section {
- height: 100vh;
- display: flex;
- align-items: center;
- justify-content: center;
- background-position: center !important;
- background-size: cover;
- margin-bottom: 30px;
- h1 {
-  text-align: center;
-  color: $primary-color;
-  font-size: 3rem;
-  text-shadow: 3px 3px 10px $secondary-color;
-  @media (min-width: 768px) {
-   font-size:5rem;
-  }
- }
- &.products {
-  height: 60vh;
- }
-}
-
-// Index Last-products section
-.last-products {
- margin-bottom: 30px;
- article {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: space-between;
-  align-items: center;
-  .img-product {
-   padding: 30px 0 15px 0;
-   align-self: auto;
-   text-align: center;
-  }
-  .content-product {
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   button {}
-  }
- }
-}
-
-.product {
- display: flex;
- margin-bottom: 2rem;
- .gatsby-image-wrapper {
-  max-width: 300px;
-  margin: 0 auto 1.5rem auto;
- }
- .info {
-  //display: flex;
-  //flex-direction: row;
-  h3 {
-   flex-grow: 2;
-  }
- }
-}
-
-footer {
- text-align: center;
- background-color: $secondary-color;
- padding: 30px;
 }
