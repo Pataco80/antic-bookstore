@@ -137,3 +137,16 @@ footer {
  background-color: $secondary-color;
  padding: 30px;
 }
+
+// SNIPCART
+.snip-layout {
+ background-color: rgba($secondary-color, 0.5);
+ .snip-layout__main-container {
+  background-color: $secondary-color;
+ }
+ .snip-header,
+ .snip-footer {
+  background-color: $primary-color;
+  color: #fff;
+ }
+}
