@@ -161,15 +161,11 @@ footer {
  .snip-table__header {
   color: $primary-color !important;
  }
- .snipcart-step {
-  tr,
-  .snip-table__body {
+ .snip-table {
+  tr {
    border-color: $primary-color !important;
-   .snip-table__item {
-    border-color: $primary-color !important;
-    h2 {
-     color: $primary-color !important;
-    }
+   h2 {
+    color: $primary-color !important;
    }
   }
  }
