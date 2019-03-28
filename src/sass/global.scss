@@ -163,11 +163,22 @@ footer {
  }
  .snip-table {
   tr:not(.snip-table__row--no-border),
-  th {
+  th,
+  td {
    border-bottom: 1px solid $primary-color !important;
    h2 {
     color: $primary-color !important;
    }
+   .snip-quantity-trigger {
+    color: $primary-color !important;
+    .snip-quantity-trigger__btn {
+     background-color: #fff !important;
+     border-color: $primary-color !important;
+    }
+   }
+  }
+  .snip-table-item td:nth-child(4) {
+   color: $primary-color !important;
   }
  }
  .snip-actions {
