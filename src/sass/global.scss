@@ -148,5 +148,27 @@ footer {
  .snip-footer {
   background-color: $primary-color !important;
   color: #fff !important;
+  h2 {
+   color: #fff !important;
+  }
+  .snip-header__total {
+   background-color: $secondary-color !important;
+   .snip-header__total-label {
+    color: $primary-color !important;
+   }
+  }
+ }
+ .snip-table__header {
+  color: $primary-color !important;
+  tr,
+  .snip-table__body {
+   border-color: $primary-color !important;
+   .snip-table__item {
+    border-color: $primary-color !important;
+    h2 {
+     color: $primary-color !important;
+    }
+   }
+  }
  }
 }
