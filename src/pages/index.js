@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 //import Image from "gatsby-image"
 import SEO from "../components/utils/seo"
-
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
