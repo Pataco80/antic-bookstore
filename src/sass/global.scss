@@ -162,11 +162,16 @@ footer {
   color: $primary-color !important;
  }
  .snip-table {
-  tr {
-   border-color: $primary-color !important;
+  tr:not(.snip-table__row--no-border),
+  th {
+   border-bottom: 1px solid $primary-color !important;
    h2 {
     color: $primary-color !important;
    }
   }
+ }
+ .snip-actions {
+  border-top: 1px solid $primary-color !important;
+  padding: 1em;
  }
 }
