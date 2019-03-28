@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Container, Navbar, Nav } from 'react-bootstrap'
 import logo from '../../images/logo.png'
+import NavLink from "react-bootstrap/NavLink"
+import { FaCartArrowDown } from 'react-icons/fa'
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -15,6 +17,9 @@ const Header = ({ siteTitle }) => (
           <Nav>
             <Link className="nav-link" to="/">Home</Link>
             <Link className="nav-link" to="/products/">Catalogue</Link>
+            <NavLink>
+              <FaCartArrowDown className="cart-icon snipcart-checkout" />
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

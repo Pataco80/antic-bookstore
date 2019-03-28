@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
 import Image from 'gatsby-image'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 import BackgroundImage from '../components/background-image'
 
 const ProductsPage = ({ data }) => {
@@ -30,8 +30,12 @@ const ProductsPage = ({ data }) => {
                   <p>{product.createdAt}</p>
                 </Row>
                 <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around">
-                  <Link className="btn btn-primary" to={`/products/${product.productName}`}>Details</Link>
-                  <Link className="btn btn-primary" to={`/products/${product.productName}`}>Details</Link>
+                  <Link className="btn btn-primary" to={`/products/${product.productName}`}>Voir l'article</Link>
+                  <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}
+                    data-item-name={product.productName}
+                    data-item-price={product.price}
+                    data-item-url="https://antic-book-store.netlify.com/"
+                    data-item-image={product.featureImage.fixed.src}>Ajouter au panier</Button>
                 </Row>
               </Col>
 
@@ -68,6 +72,10 @@ export const pageQuery = graphql`
         featureImage{
           fluid(maxWidth:300){
             ...GatsbyContentfulFluid_tracedSVG
+          }
+          fixed(width:50){
+            src
+            ...GatsbyContentfulFixed_tracedSVG
           }
         }
         productName
