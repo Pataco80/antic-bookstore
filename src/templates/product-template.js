@@ -7,7 +7,7 @@ import { FiArrowLeftCircle } from "react-icons/fi";
 
 const ProductTemplate = ({ data }) => {
   const product = data.contentfulProductsCatalogue
-  const { productName, featureImage, price, author, publicationDate, createdAt } = product
+  const { productName, featureImage, price, author, publicationDate } = product
   const { description } = data.contentfulProductsCatalogue.description
   return (
     <Layout>
@@ -23,7 +23,6 @@ const ProductTemplate = ({ data }) => {
               <p className="w-100"><b>Auteur : </b>{author}</p>
               <p><b>Publié le : </b>{publicationDate}</p>
               <div>{description}</div>
-              <p><b>Date de publication : </b>{createdAt}</p>
             </Row>
             <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around align-content-around">
               <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}

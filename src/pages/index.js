@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import { Row, Col } from 'react-bootstrap'
 import BackgroundImage from '../components/background-image'
@@ -24,8 +24,7 @@ const IndexPage = ({ data }) => (
                   <h3>{produits.productName}</h3>
                   <p>{`CHF ${produits.price}`}</p>
                   <p>{produits.author}</p>
-                  <p>{produits.publicationDate}</p>
-                  <p>{`Publié le ${produits.createdAt}`}</p>
+                  <p>{`Publié le ${produits.publicationDate}`}</p>
                 </Col>
                 <Link className="btn btn-primary align-items-end" to={`/products/${produits.productName}`}>Details</Link>
               </Row>

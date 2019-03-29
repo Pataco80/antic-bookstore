@@ -21,13 +21,12 @@ const ProductsPage = ({ data }) => {
               <Col className="info" sm="9" md="8">
                 <Row className="ml-0 mr-0">
                   <h3>{product.productName}</h3>
-                  <p>{`CHF ${product.price}`}</p>
+                  <p><b>Prix de vente : </b>{`CHF ${product.price}`}</p>
                 </Row>
                 <Row className="ml-0 mr-0">
-                  <p className="w-100">{product.author}</p>
-                  <p>{product.publicationDate}</p>
+                  <p className="w-100"><b>Auteur : </b>{product.author}</p>
+                  <p><b>Publié le : </b>{product.publicationDate}</p>
                   <div>{product.description.description.substr(0, 600) + " ..."}</div>
-                  <p>{product.createdAt}</p>
                 </Row>
                 <Row className="ml-0 mr-0 justify-content-around align-content-around">
                   <Link className="btn btn-primary" to={`/products/${product.productName}`}>Voir l'article</Link>

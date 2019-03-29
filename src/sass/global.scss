@@ -177,6 +177,12 @@ section.container {
    flex-grow: 2;
   }
 
+  b {
+   color: $primary-color;
+   font-weight: bold;
+   text-decoration: underline;
+  }
+
   .btn {
    margin-bottom: 1rem;
   }
