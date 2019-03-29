@@ -38,17 +38,10 @@ const ProductsPage = ({ data }) => {
                     data-item-image={product.featureImage.fixed.src}>Ajouter au panier</Button>
                 </Row>
               </Col>
-
             </article>
           )
         })}
-        <Col>
-        </Col>
       </section>
-
-      <div>
-
-      </div>
     </Layout>
   )
 }
