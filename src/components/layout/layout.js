@@ -31,6 +31,7 @@ const Layout = ({ children }) => (
         <section
           style={{
             paddingTop: `66px`,
+            minHeight: '100vh'
           }}
         >
           <main>{children}</main>
