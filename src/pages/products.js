@@ -26,10 +26,10 @@ const ProductsPage = ({ data }) => {
                 <Row className="ml-0 mr-0">
                   <p className="w-100">{product.author}</p>
                   <p>{product.publicationDate}</p>
-                  <div>{product.description.description}</div>
+                  <div>{product.description.description.substr(0, 600) + " ..."}</div>
                   <p>{product.createdAt}</p>
                 </Row>
-                <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around">
+                <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around align-content-around">
                   <Link className="btn btn-primary" to={`/products/${product.productName}`}>Voir l'article</Link>
                   <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}
                     data-item-name={product.productName}

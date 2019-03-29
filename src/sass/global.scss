@@ -21,6 +21,10 @@ a {
  text-decoration: underline;
 }
 
+a.btn {
+ text-decoration: none;
+}
+
 .btn-primary {
  background-color: $primary-color;
  border-color: $primary-color;
@@ -48,6 +52,7 @@ a {
  }
  .navbar-brand {
   color: $primary-color;
+  text-decoration: none;
  }
  .navbar-collapse {
   justify-content: center;
@@ -118,16 +123,17 @@ a {
 
 .product {
  display: flex;
- margin-bottom: 2rem;
+ margin-bottom: 3rem;
  .gatsby-image-wrapper {
   max-width: 300px;
   margin: 0 auto 1.5rem auto;
  }
  .info {
-  //display: flex;
-  //flex-direction: row;
   h3 {
    flex-grow: 2;
+  }
+  .btn {
+   margin-bottom: 1rem;
   }
  }
 }
