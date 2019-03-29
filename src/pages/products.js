@@ -34,7 +34,7 @@ const ProductsPage = ({ data }) => {
                   <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}
                     data-item-name={product.productName}
                     data-item-price={product.price}
-                    data-item-url={`https://antic-book-store.netlify.com/products/${product.productName}`}
+                    data-item-url="https://antic-book-store.netlify.com/"
                     data-item-image={product.featureImage.fixed.src}>Ajouter au panier</Button>
                 </Row>
               </Col>
