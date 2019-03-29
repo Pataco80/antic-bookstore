@@ -23,7 +23,6 @@ const Header = ({ siteTitle }) => (
           </Nav>
         </Navbar.Collapse>
       </Container>
-
     </Navbar>
   </header>
 )

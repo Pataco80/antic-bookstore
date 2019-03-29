@@ -6,7 +6,6 @@ import { Row, Col, Button } from 'react-bootstrap'
 import { FiArrowLeftCircle } from "react-icons/fi";
 
 const ProductTemplate = ({ data }) => {
-  console.log(data)
   const product = data.contentfulProductsCatalogue
   const { productName, featureImage, price, author, publicationDate, createdAt } = product
   const { description } = data.contentfulProductsCatalogue.description
@@ -27,7 +26,6 @@ const ProductTemplate = ({ data }) => {
               <p><b>Date de publication : </b>{createdAt}</p>
             </Row>
             <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around align-content-around">
-
               <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}
                 data-item-name={product.productName}
                 data-item-price={product.price}
@@ -39,18 +37,12 @@ const ProductTemplate = ({ data }) => {
         <Row>
           <Link className="btn btn-primary back" to="/products/"><FiArrowLeftCircle /> Retour aux produits</Link>
         </Row>
-
       </section>
-
-
-
-
     </Layout>
   )
 }
 
 export default ProductTemplate
-
 
 export const query = graphql`
 query ($id: String!) {

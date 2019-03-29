@@ -48,7 +48,6 @@ const ProductsPage = ({ data }) => {
 
 export default ProductsPage
 
-
 export const pageQuery = graphql`
 {
   bcgImg: file(relativePath: {eq: "bcg-img-products.jpg"}) {
