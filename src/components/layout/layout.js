@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "../global/header"
 import Footer from '../global/footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'typeface-courgette'
 import '../../sass/global.scss'
 
 const Layout = ({ children }) => (

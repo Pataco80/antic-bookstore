@@ -10,6 +10,7 @@ h5,
 h6 {
  color: $primary-color;
  text-decoration: underline;
+ font-family: 'courgette';
 }
 
 h2 {
@@ -70,6 +71,7 @@ section.container {
  .navbar-brand {
   color: $primary-color;
   text-decoration: none;
+  font-family: 'courgette';
  }
 
  .navbar-collapse {
