@@ -18,20 +18,21 @@ const IndexPage = ({ data }) => (
       <Row className="justify-content-sm-center">
         {data.produits.edges.map(({ node: produits }) => {
           return (
-            <article className="col-sm-6 col-md-4" key={produits.id}>
+            <article className="d-flex col-sm-6 col-md-4" key={produits.id}>
               <Row className="img-product justify-content-center">
                 <Image className="col-xs-12" fixed={produits.featureImage.fixed} />
               </Row>
 
               <Row className="content-product">
-                <Col className="info">
+                <Col className="bloctexte">
                   <h3>{produits.productName}</h3>
                   <p>{`CHF ${produits.price}`}</p>
                   <p>{produits.author}</p>
                   <p>{produits.publicationDate}</p>
                   <p>{`Publié le ${produits.createdAt}`}</p>
-                  <Link className="btn btn-primary" to={`/products/${produits.productName}`}>Details</Link>
+
                 </Col>
+                <Link className="btn btn-primary align-items-end" to={`/products/${produits.productName}`}>Details</Link>
               </Row>
             </article>
 

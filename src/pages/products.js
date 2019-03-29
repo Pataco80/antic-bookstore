@@ -14,7 +14,7 @@ const ProductsPage = ({ data }) => {
         <h2 className="text-center">Nos Produits</h2>
         {data.products.edges.map(({ node: product }) => {
           return (
-            <Row className="product" key={product.id}>
+            <article className="product row" key={product.id}>
               <Col sm="3" md="4" className="img-product">
                 <Image fluid={product.featureImage.fluid} />
               </Col>
@@ -29,7 +29,7 @@ const ProductsPage = ({ data }) => {
                   <div>{product.description.description.substr(0, 600) + " ..."}</div>
                   <p>{product.createdAt}</p>
                 </Row>
-                <Row className="ml-0 mr-0 flex-column flex-sm-row justify-content-around align-content-around">
+                <Row className="ml-0 mr-0 justify-content-around align-content-around">
                   <Link className="btn btn-primary" to={`/products/${product.productName}`}>Voir l'article</Link>
                   <Button className="btn btn-primary snipcart-add-item" data-item-id={product.id}
                     data-item-name={product.productName}
@@ -39,7 +39,7 @@ const ProductsPage = ({ data }) => {
                 </Row>
               </Col>
 
-            </Row>
+            </article>
           )
         })}
         <Col>
