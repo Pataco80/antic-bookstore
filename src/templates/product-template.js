@@ -36,7 +36,10 @@ const ProductTemplate = ({ data }) => {
             </Row>
           </Col>
         </Row>
-        <Link className="btn btn-primary back" to="/products/"><FiArrowLeftCircle /> Retour aux produits</Link>
+        <Row>
+          <Link className="btn btn-primary back" to="/products/"><FiArrowLeftCircle /> Retour aux produits</Link>
+        </Row>
+
       </section>
 
 
