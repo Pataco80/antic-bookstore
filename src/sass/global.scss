@@ -204,80 +204,165 @@ footer {
 
  .snip-layout__main-container {
   background-color: $secondary-color !important;
- }
 
- .snip-header,
- .snip-footer {
-  background-color: $primary-color !important;
-  color: #fff !important;
+  h1,
+  h2,
+  h3 {
+   font-family: "courgette" !important;
+   color: $primary-color !important;
+  }
 
-  h2 {
+  .snip-header,
+  .snip-footer {
+   background-color: $primary-color !important;
    color: #fff !important;
-  }
 
-  .snip-header__total {
-   background-color: $secondary-color !important;
+   .snip-header__title {
+    color: #fff !important;
 
-   .snip-header__total-label {
-    color: $primary-color !important;
-   }
-  }
- }
-
- .snip-table__header {
-  color: $primary-color !important;
- }
-
- .snip-table {
-
-  tr:not(.snip-table__row--no-border),
-  th,
-  td {
-   border-bottom: 1px solid $primary-color !important;
-
-   h2 {
-    color: $primary-color !important;
+    &.js-show {
+     text-align: center;
+     width: 100%
+    }
    }
 
-   .snip-quantity-trigger {
-    color: $primary-color !important;
+   .snip-header__total {
+    background-color: $secondary-color !important;
 
-    .snip-quantity-trigger__btn {
-     background-color: #fff !important;
-     border: 1px solid $primary-color !important;
+    .snip-header__total-label {
+     color: $primary-color !important;
     }
    }
   }
 
-  .snip-table__item td:nth-child(4) span {
+  .snip-step__item {
+   background: darken($secondary-color, 8) !important;
+   border-bottom: 1px solid $primary-color !important;
    color: $primary-color !important;
+   font-size: 1rem !important;
+
+   .snip-step__label {
+    font-size: 1rem !important;
+    text-align: center !important;
+   }
+
+   &.js-active {
+    background-color: #fff !important;
+    border-bottom: 1px solid #fff !important;
+    color: $primary-color !important;
+   }
   }
 
-  .snip-table__item td:nth-child(5) span {
-   color: $primary-color !important;
-   background-color: #fff !important;
-   padding: 3px !important;
-   border: 1px solid $primary-color !important;
+  .snip-step__item+.snip-step__item {
+   border-bottom-color: $primary-color !important;
+   border-left-color: $primary-color !important;
+
+  }
+
+  .snip-layout__content .snip-col {
+   border-color: $primary-color !important;
+  }
+
+  .snip-layout__content--bordered {
+   border-bottom-color: $primary-color;
+  }
+
+  .snip-table th {
+   border-bottom-color: #5e2919 !important;
+   font-size: 0.75rem !important;
    font-weight: bold !important;
+   color: $primary-color;
   }
- }
 
- .snip-actions {
-  border-top: 1px solid $primary-color !important;
-  padding: 1em;
+  .snip-table__item {
+   border-bottom-color: $primary-color !important;
+   padding-bottom: 0;
 
-  .snip-actions__link {
+   .snip-table__small-col+.snip-table__small-col {
+    border-left-color: $primary-color !important;
+
+   }
+
+
+
+   .snip-table__small-col {
+    color: $primary-color !important;
+    font-weight: lighter;
+
+    .snip-quantity-trigger {
+     color: $primary-color !important;
+
+     a {
+      border: 1px solid $primary-color;
+      background-color: #fff;
+     }
+    }
+   }
+
+   .snip-table__cell--highlight {
+    font-weight: bold;
+   }
+  }
+
+  .snip-table__cell--highlight {
    color: $primary-color !important;
   }
- }
 
- .snip-btn--highlight {
-  background-color: $primary-color !important;
-  color: #fff !important;
- }
+  form {
+   .snip-col {
+    border-color: $primary-color !important;
 
- .snip-footer a,
- .snip-footer b {
-  color: #fff !important;
+    label,
+    a {
+     color: $primary-color;
+    }
+
+    input,
+    select {
+     border: 1px solid $primary-color;
+    }
+   }
+
+
+  }
+
+  .snip-table tr,
+  .snip-table td {
+   border-color: $primary-color !important;
+  }
+
+
+
+
+  .snip-btn {
+   background-color: $secondary-color !important;
+   color: $primary-color !important;
+   border: 1px solid $primary-color !important;
+   font-style: normal !important;
+
+   &.snip-btn--highlight {
+    background-color: $primary-color !important;
+    color: #fff !important;
+   }
+  }
+
+  .snip-actions {
+   border-color: $primary-color !important;
+
+   a {
+    color: lighten($primary-color, 10) !important;
+    font-style: italic;
+
+   }
+  }
+
+  .snip-footer a,
+  .snip-footer b {
+   color: #fff !important;
+  }
+
+  .snip-static__content {
+   color: #000;
+  }
  }
 }
